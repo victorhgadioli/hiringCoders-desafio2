@@ -51,9 +51,7 @@ const ProductList: React.FC = () => {
       name === "" ||
       barCode === "" ||
       description === "" ||
-      category === "" ||
-      price === 0 ||
-      quantity === 0;
+      category === "";
 
     if (fieldIsEmpty === true) {
       setEmptyField(true);
@@ -175,6 +173,10 @@ const ProductList: React.FC = () => {
                   variant="outlined"
                   label="Preço da unidade"
                   fullWidth
+                  type="number"
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
                   value={price}
                   onChange={(event) => setPrice(parseFloat(event.target.value))}
                 />
@@ -184,10 +186,11 @@ const ProductList: React.FC = () => {
                   variant="outlined"
                   label="Quantidade"
                   fullWidth
+                  type="number"
                   value={quantity}
-                  onChange={(event) =>
-                    setQuantity(parseInt(event.target.value, 10))
-                  }
+                  onChange={(event) => {
+                    setQuantity(parseInt(event.target.value, 10));
+                  }}
                 />
               </TableCell>
               <TableCell>
