@@ -4,7 +4,7 @@ Este projeto foi desenvolvido como um desafio do programa Hiring Coders, da Gama
 
 ## Demo online
 
-
+https://vhg-register-system.netlify.app/
 
 ## Objetivo do projeto
 
@@ -27,4 +27,5 @@ In the project directory, you can run:
 
 ## Para testar no seu computador (comandos)
 
-$
+$yarn install
+$yarn start
